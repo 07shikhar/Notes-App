@@ -62,5 +62,19 @@ yarg.command({
         notes.listNotes()
     }
 })
+yarg.command({
+    command: 'read',
+    describe: 'reading notes',
+    builder:{
+        title:{
+            describe: 'Title',
+            demandOption: true,
+            type: 'string'
+            }
+        },
+    handler(argv){
+        notes.readNotes(argv.title)
+    }
+})
 
  yarg.parse()
