@@ -11,6 +11,7 @@ const addNote = (title, body) => {
     //     return note.title === title
     // })
     const duplicateNote = readNotes.find((note) => note.title === title)
+    //if(duplicateNotes.length>0)
     if(!duplicateNote)
     {
         readNotes.push({
